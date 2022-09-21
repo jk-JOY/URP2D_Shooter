@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMove : MonoBehaviour
 {
     protected Rigidbody2D RB;
-    
-    [SerializeField] protected float curVelocity;
+
+
+    [field: SerializeField] public MovementDataSO MovementData { get; set; }  
+    [SerializeField]        protected float curVelocity;
 
     private void Awake()
     {
